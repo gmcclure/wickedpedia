@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300)
+@import url(https://fonts.googleapis.com/css?family=Creepster)
+
+body
+  background-color: #333
+  color: white
+  font-family: Lato, sans-serif
+  margin-bottom: 50px
+  overflow-y: scroll
+
+h1
+  color: #777
+  font-family: Creepster, cursive
+  font-size: 2.4em
+  margin-bottom: -15px
+  text-align: center
+
+h3
+  color: #c33
+  font-weight: normal
+  text-align: center
+
+#search
+  position: relative
+  height: 75px
+  min-width: 400px
+  text-align: center
+  top: 75px
+  transition: top 1.5s ease 0.5s
+  
+  &.in-search
+    top: 0px
+    transition: top 1.5s ease
+
+#search-button
+  display: block
+  margin: 0 auto
+  background: none
+  border: none
+  cursor: pointer
+  font-size: 2.6em
+  outline: 0
+  width: 60px
+  
+#button-caption
+  color: #777
+  text-shadow: 2px 1px 1px black
+  transition: visibility 0.2
+
+#search-form
+  visibility: hidden
+  position: absolute
+  top: 8px
+  width: 100%
+
+input[type=text]
+  display: inline-block
+  margin: 0 auto
+  border: 2px solid #aaa
+  border-radius: 20px
+  background: #000
+  color: white
+  font-size: 0.8rem
+  margin-left: 26px
+  outline: 0
+  padding: 0.8em 2em 0.8em 1.2em
+  width: 5px
+  transition: width 0.5s ease-in
+   
+  &.full-search
+    width: 300px
+
+#close-button
+  position: relative
+  top: 5px
+  right: 32px
+  font-size: 1.5em
+  color: #c22
+  cursor: pointer
+  transition: visibility 0.08s
+
+#results-list 
+  width: 500px
+  margin: 0 auto
+      
+  a
+    text-decoration: none
+    color: #eee
+  
+  li
+    list-style-type: none
+    color: #bbb
+    text-shadow: 1px 1px 2px black
+    width: 450px
+    height: 80px
+    background: linear-gradient(#444, #000)
+    margin-top: 10px
+    padding: 10px
+    border-radius: 4px
+    animation: fadeIn 2s
+    transition: box-shadow 1s
+      
+    &:hover
+      box-shadow: 0 0 13px 2px #c00
+      transition: box-shadow 0.5s
+    
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+    
+.result-snippet
+  margin-top: 5px
+  font-size: 13px
+  
+.searchmatch
+  color: #c00
+  
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+  display: none !important

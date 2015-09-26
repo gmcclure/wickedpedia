@@ -1,0 +1,19 @@
+h1 Wickedpedia
+h3 Evil Answers To Perfectly Innocent Queries
+
+#container(ng-app='wicked' ng-controller='LookupController as lookupCtrl')
+  #search
+    button#search-button &#128128;
+    div#button-caption Click to Poison the Proceeds
+    #search-form
+      form(ng-submit='lookupCtrl.lookup(lookupCtrl.query)')
+        input#search-box(type='text' ng-model='lookupCtrl.query')
+        span#close-button &#11198;
+
+  #results
+    ul#results-list.ng-cloak
+      a(href='https://en.wikipedia.org/wiki/{{result.linkText}}', target='_blank', ng-repeat='result in lookupCtrl.results') 
+        li
+          div.result-title 
+            {{result.title}}
+          div.result-snippet(ng-bind-html="result.snippet")
